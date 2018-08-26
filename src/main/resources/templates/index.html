@@ -1,0 +1,50 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>Raspberry Pi - Web Controls - HOME</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script type="text/javascript">
+</script>
+</head>
+<body>
+	<div class="jumbotron text-center">
+		<img src="../static/images/penguin.png" 
+			th:src="@{images/penguin.png}" 
+			width="1000" 
+			class="img-responsive"
+			alt="Responsive image"
+			onclick="$('html, body').animate({scrollTop: 600}, 2000);">
+		<h1>Rashpberry Pi - Web Controls</h1>
+		<p>IOT Project</p>
+	</div>
+	<hr />
+	<div class="container">
+		<h2>Controls</h2>
+		<div class="panel panel-default">
+			<div class="panel-heading">Light</div>
+			<div class="panel-body">
+				<div class="btn-group btn-group-toggle" data-toggle="buttons">
+					<label class="btn btn-secondary"> <input type="radio" name="options" id="option1" autocomplete="off"	checked>ON</label>
+					<label class="btn btn-secondary active"> <input type="radio" name="options" id="option2" autocomplete="off">OFF</label>
+				</div>
+			</div>
+		</div>
+		<div class="panel panel-default">
+			<div class="panel-heading">Message</div>
+			<div class="panel-body">
+				<input type="text" class="form-control" id="message">
+				<br/>
+				<a href="#" class="btn btn-primary btn-primary"><span class="glyphicon glyphicon-cloud-upload"></span> Send</a>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

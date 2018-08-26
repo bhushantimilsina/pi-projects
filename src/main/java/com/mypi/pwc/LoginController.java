@@ -8,12 +8,12 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
-public class HomeController {
-	private static final Logger log = LoggerFactory.getLogger(HomeController.class);
+public class LoginController {
+	private static final Logger log = LoggerFactory.getLogger(LoginController.class);
 	
-	@GetMapping("/home")
+	@GetMapping("/login")
 	public String homePage() {
-		log.info("Rendering Home page ...");
-		return "index";
+		log.info("Rendering Login page ...");
+		return "login";
 	}
 }
